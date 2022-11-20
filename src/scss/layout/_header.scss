@@ -1,0 +1,20 @@
+.site-header {
+    position: fixed;
+    height: 160px;
+    width: 100%;
+    display: grid;
+    padding: 0 var(--gap-xl);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__branding {
+        width: 165px; // temp
+        height: 45px; // temp
+        background-color: pink; // temp
+        display: block;
+    }
+}

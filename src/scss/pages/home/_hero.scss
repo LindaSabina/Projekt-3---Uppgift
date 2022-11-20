@@ -1,0 +1,10 @@
+.hero {
+    background-color: var(--color-light);
+    height: 100vh;
+    display: grid;
+    padding: 32px;
+
+    &__inner {
+        background-color: #000; // temp
+    }
+}
