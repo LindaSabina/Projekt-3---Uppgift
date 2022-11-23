@@ -5,6 +5,60 @@
     padding: 32px;
 
     &__inner {
-        background-color: #000; // temp
+        background-color: #000;     // temp
+        display: grid;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+        align-items: center;
+    }
+
+    &__main {
+        grid-area: main;
+        padding: var(--gap-m) var(--gap-xl);
+        position: relative;
+    }
+
+    &__footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 var(--gap-m);
+    }
+
+    &__content {
+        max-width: 50rem;
+        width: 100%;
+        background-color: yellow; // temp
+        min-height: 400px;          // temp
+    }
+
+    &__prev-link {
+        display: block;
+        min-height: 40px;           // temp
+        max-width: 250px;           // temp
+        width: 100%;                // temp
+        background-color: yellow; // temp
+    }
+
+    &__pagination {
+        min-height: 40px;           // temp
+        max-width: 250px;           // temp
+        width: 100%;                // temp
+        background-color: yellow; // temp
+    }
+
+    &__social {
+        min-height: 40px;           // temp
+        max-width: 250px;           // temp
+        width: 100%;                // temp
+        background-color: red;    // temp
+        position: absolute;
+        right: var(--gap-m);
+        top: 40%;
+        transform: rotate(-90deg) translatex(50%);
+        transform-origin: bottom right;
     }
 }
