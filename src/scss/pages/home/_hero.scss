@@ -32,7 +32,6 @@
         max-width: 50rem;
         width: 100%;
         background-color: yellow; // temp
-        min-height: 400px;          // temp
     }
 
     &__prev-link {
@@ -44,16 +43,13 @@
     }
 
     &__pagination {
-        min-height: 40px;           // temp
-        max-width: 250px;           // temp
-        width: 100%;                // temp
+        display: flex;
+        align-items: center;
+        gap: var(--gap-s);
         background-color: yellow; // temp
     }
 
     &__social {
-        min-height: 40px;           // temp
-        max-width: 250px;           // temp
-        width: 100%;                // temp
         background-color: red;    // temp
         position: absolute;
         right: var(--gap-m);
@@ -61,4 +57,20 @@
         transform: rotate(-90deg) translatex(50%);
         transform-origin: bottom right;
     }
+
+    .counter {
+        &__total {
+            &:before {
+                content: '/ ';
+            }
+        }
+    }
+}
+
+.social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
 }
