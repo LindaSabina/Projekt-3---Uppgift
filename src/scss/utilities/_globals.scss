@@ -20,9 +20,9 @@
     --color-dark-800: #d5d5d5;
     --color-dark-900: #f1f1f1;
 
-    --color-accent: #02668a;
-    --color-accent-200: #02668a;
-    --color-accent-300: #02668a;
+    --color-accent: #D8C3A3;
+    --color-accent-200: #d9cab4;
+    --color-accent-300: #dbd1c2;
     --color-accent-400: #02668a;
     --color-accent-500: #02668a;
     --color-accent-600: #02668a;
@@ -36,17 +36,17 @@
     --color-light-400: #efead8;
     --color-light-500: #efead8;
     --color-light-600: #efead8;
-    --color-light-700: #efead8;
+    --color-light-700: #aaa;
     --color-light-800: #efead8;
     --color-light-900: #efead8;
 
-    --font-sans: 'Arial', sans-serif;
-    --font-serif: 'Georgia', serif;
+    --font-sans: 'futura-pt', 'Arial', sans-serif;
+    --font-serif: 'questa-grande', 'Georgia', serif;
 
     --line-height: 1.5;
 
     --font-scale: 1.25;
-    --font-size: 1rem;
+    --font-size: 1.125rem;
 
     --font-size-1: var(--font-size);
     --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
