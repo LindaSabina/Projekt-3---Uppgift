@@ -4,6 +4,7 @@
     width: 100%;
     display: grid;
     padding: 0 var(--gap-xl);
+    z-index: 999;
 
     &__inner {
         display: flex;
