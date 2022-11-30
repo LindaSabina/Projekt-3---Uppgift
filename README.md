@@ -8,4 +8,4 @@
 `git clone https://github.com/LindaSabina/scss-base-2022.git . && rm -rf .git`
 
 ## Develop
-`sass --watch src/scss/style.scss style.css`
+`sass --watch src/scss/style.scss style.css`# Projekt-3---Uppgift
