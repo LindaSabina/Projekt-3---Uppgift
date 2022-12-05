@@ -581,7 +581,7 @@ li {
     order: 1;
     margin-bottom: var(--gap-l);
     margin-left: 0;
-    max-width: 40rem;
+    max-width: 45rem;
   }
 }
 .tours__category {
