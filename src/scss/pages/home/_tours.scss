@@ -3,31 +3,63 @@
 
 .tours {
     background: var(--color-accent-700);
-    background-image: url(Mountains.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+    position: relative;
 
+    &__background-image {
+        position: absolute;
+        top: 100px;
+
+        @include responsive.max(1400px) {
+            display: none;
+        }
+
+    }
    
     &__inner {
-        padding: 180px 6rem;
+        padding: 150px 6rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-    }
 
+        @include responsive.max(1400px) {
+            padding: 50px 6rem;
+        }
+
+        @include responsive.max(30rem) {
+            padding: 30px var(--gap-m);
+        }
+
+    }
 
     &__gallery {
         display: grid;
-        grid-template-columns: repeat(3, 19rem);
-        grid-auto-rows: 13rem;
-        gap: var(--gap-m);
+        grid-template-columns: repeat(3, 13.5rem);
+        grid-auto-rows: 9rem;
+        gap: var(--gap-s);
+
+        a {
+            line-height: 0;
+        }
+
+        @include responsive.max(1400px) {
+            order: 2;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+        }
+
+        @include responsive.max(840px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         position: relative;
+
+        @include responsive.max(840px) {
+            flex-grow: 1;
+        }
     }
 
     &__item:hover &__item__overlay {
@@ -39,10 +71,11 @@
         z-index: 2;
         position: absolute;
         background-color: rgba(0,0,0,0.5);
-        color: white;
-        font-size: 20px;
+        color: var(--color-light);
+        font-size: 1rem;
         font-weight: 200;
         line-height: 1.5;
+        text-align: center;
         top: 0;
         bottom: 0;
         left: 0;
@@ -72,44 +105,81 @@
     }
 
     &__content {
-        max-width: 38rem;
-        margin: var(--gap-xl);
+        max-width: 30rem;
         position: relative;
+        margin-left: var(--gap-m);
 
         &::before {
             content: '';
             display: block;
             background-color: var(--color-accent);
-            opacity: 0.44;
+            opacity: 0.5;
             height: 1px;
-            width: 8rem;
+            width: 6rem;
             position: absolute;
         }
 
         &::before {
-            top: 4rem;
+            top: 2.75rem;
             left: 1rem;
+
+            @include responsive.max(30rem) {
+                top: 2rem;
+            }
+        }
+
+        @include responsive.max(1400px) {
+            order: 1;
+            margin-bottom: var(--gap-l);
+            margin-left: 0;
+            max-width: 40rem;
+        }
+
+    }
+
+    &__category {
+        font-size: var(--font-size-1);
+        margin-bottom: var(--gap-xl);
+
+        &:hover {
+            color: var(--color-accent);
+        }
+
+        @include responsive.max(30rem) {
+            margin-bottom: var(--gap-m);
         }
     }
 
     &__title {
-        font-size: var(--font-size-5);
-        margin-top: var(--gap-xl);
-        margin-bottom: var(--gap-s);
+        color: var(--color-dark);
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: var(--gap-m);
+
+        @include responsive.max(30rem) {
+            margin-bottom: var(--gap-s);
+        }
     }
 
     &__text {
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-1);
         color: var(--color-dark-400);
+        margin-bottom: var(--gap-xl);
+
+        @include responsive.max(1400px) {
+            margin-bottom: var(--gap-l);
+        }
+
+        @include responsive.max(30rem) {
+            margin-bottom: var(--gap-m);
+        }
     }
 
     &__button {
        
         @include button.default;
-        margin-top: var(--gap-l);
-
         color: var(--color-dark);
         font-weight: 500;
+        font-size: var(--font-size-1);
 
         &:hover {
             
@@ -120,6 +190,13 @@
             }
             
         }
+
+        svg {
+            @include responsive.max(30rem) {
+                max-width: 2rem;
+            }
+        }
+
 
 }
 
